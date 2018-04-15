@@ -1,14 +1,17 @@
 import React from 'react';
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 import App from './App';
+import AppHeader from './components/AppHeader'
+
 import AddPost from './components/AddPost'
 export default() => {
     return (
-        <BrowserRouter>
-            <Switch>
-                <Route exact path='/' component={App}/> 
-                <Route  path='/AddPost' component={AddPost}/> 
-            </Switch>
-        </BrowserRouter>
+        <Router>
+            <div className="app">
+                <AppHeader/>
+                <Route exact path='/' component={App}/>
+                <Route path='/AddPost' component={AddPost}/>
+            </div>
+        </Router>
     )
 }

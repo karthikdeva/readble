@@ -55,6 +55,9 @@ body {
         padding-right: 5px;
     }
 }
+.displayErrors input:invalid {
+    border-color: red;
+  }
 .posts {
     width: 100%;
     .title-row {
@@ -80,6 +83,7 @@ body {
         svg {
             margin: 0 5px;
             color:#563d7c;
+            cursor: pointer;
         }
     }
 }

@@ -1,13 +1,6 @@
 import React from 'react'
 
 class Categories extends React.Component {
-    // console.log(data.categories); if (data.categories.length === 0) {     return
-    // <p>No Categories found.</p> }
-
-    onChange = (value) => {
-        //
-        console.log(this.props);
-    }
     render() {
         return (
             <div className="categories">
@@ -15,9 +8,13 @@ class Categories extends React.Component {
                     name="categories"
                     id="categories"
                     className="form-control"
-                    onChange={e => this.props.onChange(e.target.value)}>
-                    <option value="All">All</option>
-                    {this
+                    onChange={e => this
+                    .props
+                    .onChange(e.target.value)}>
+                    <option value="SHOW_ALL_POSTS">All</option>
+                    {Object
+                        .keys(this.props.categories)
+                        .length !== 0 && this
                         .props
                         .categories
                         .map((category) => (

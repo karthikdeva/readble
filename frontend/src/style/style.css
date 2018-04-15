@@ -42,6 +42,9 @@ body {
 .btn svg {
   padding-right: 5px; }
 
+.displayErrors input:invalid {
+  border-color: red; }
+
 .posts {
   width: 100%; }
   .posts .title-row {
@@ -61,7 +64,8 @@ body {
     line-height: 1.2; }
   .posts .vote-icons svg {
     margin: 0 5px;
-    color: #563d7c; }
+    color: #563d7c;
+    cursor: pointer; }
 
 @media all and (max-width: 640px) {
   .row {
