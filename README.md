@@ -1,22 +1,30 @@
-# Readable API Server
+## Project Name: Readable : [~Readable~](https://github.com/karthikdeva)
 
-This is the starter project for the final assessment project for Udacity's Redux course where you will build a content and comment web app. Users will be able to post content to predefined categories, comment on their posts and other users' posts, and vote on posts and comments. Users will also be able to edit and delete posts and comments.
+## Author: [~Karthikdeva~](https://github.com/karthikdeva)
 
-This repository includes the code for the backend API Server that you'll use to develop and interact with the front-end portion of the project.
+## Description :
 
-## Start Developing
+In this Readable (react-redux) application users will be able to post content to predefined categories, comment on their posts and other users' posts,
+and vote on posts and comments. Users will also be able to edit and delete posts and comments. Also, the users can upvote, downvote, edit
+or delete posts and comments.This app uses material design principles.
 
-To get started developing right away:
+## Getting Started
 
-* Install and start the API server
-    - `cd api-server`
-    - `npm install`
-    - `node server`
-* In another terminal window, use Create React App to scaffold out the front-end
-    - `create-react-app frontend`
-    - `cd frontend`
-    - `npm start`
+To start using the aplication, Follow the below steps
 
-## API Server
+## How do I setup the Environment?
 
-Information about the API server and how to use it can be found in its [README file](api-server/README.md).
+    1. Install node js https://nodejs.org/en/ // version should be above 8
+
+    2. then open cmd and navigate to "frontend" folder and run `npm i`
+
+    3. then go to "api-server" folder and run run `npm i`
+
+## How do I run Readable app?
+
+Step 1: Go to "api-server" folder and run `node server`
+Step 2: Go to "frontend" folder and run ``npm run start`
+
+## To generate a production version run the below command
+
+     `npm run build`
