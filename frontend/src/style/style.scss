@@ -1,95 +1,144 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
 }
 
 .container {
-    padding-top: 50px;
-    max-width: 900px;
+  padding-top: 50px;
+  max-width: 1024px;
 }
 
 .bd-navbar {
-    min-height: 4rem;
-    background-color: #563d7c;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .05), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  min-height: 4rem;
+  background-color: #563d7c;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1);
 }
 
 .card {
-    margin: 20px 0;
-    border-radius: 3px;
-    .card-header {
-        font-size: 18px;
-        font-weight: 600;
-    }
-    .card-block {
-        -webkit-box-flex: 1;
-        -webkit-flex: 1 1 auto;
-        -ms-flex: 1 1 auto;
-        flex: 1 1 auto;
-        padding: 1.25rem;
-    }
+  margin: 20px 0;
+  border-radius: 3px;
+
+  .card-header {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .card-block {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+  }
 }
 
 .navbar-brand {
-    svg {
-        margin: -3px 15px 0 0;
-        color: #F4B007;
-    }
+  svg {
+    margin: -3px 15px 0 0;
+    color: #f4b007;
+  }
 }
 
 .btn-primary {
-    background-color: #563d7c;
-    border-color: #563d7c;
-}
-.textarea{
-     resize: none;
-}
-.add-post{
-    .btn{
-        margin-right: 10px;
-    }
-}
-.btn {
-    svg{
-        padding-right: 5px;
-    }
-}
-.displayErrors input:invalid {
-    border-color: red;
-  }
-.posts {
-    width: 100%;
-    .title-row {
-        float: left;
-        width: 100%;
-        margin-bottom: 10px;
-        position: relative;
-        h2 {
-            margin: 0;
-        }
-    }
-    .card-link {
-        width: 100%;
-        float: left;
-    }
-    .vote-icons {
-        span {
-            display: block;
-            margin: 0;
-            width: 100%;
-            line-height: 1.2;
-        }
-        svg {
-            margin: 0 5px;
-            color:#563d7c;
-            cursor: pointer;
-        }
-    }
+  background-color: #563d7c;
+  border-color: #563d7c;
 }
 
-@media all and (max-width: 640px) {
-    .row {
-        margin: 0;
+.textarea {
+  resize: none;
+}
+
+.add-post {
+  .btn {
+    margin-right: 10px;
+  }
+}
+
+.btn {
+  svg {
+    padding-right: 5px;
+  }
+}
+
+.post-header {
+  margin-bottom: 20px;
+}
+
+.displayErrors input:invalid {
+  border-color: red;
+}
+
+.home {
+  .posts {
+    margin-top: -20px;
+  }
+}
+
+.posts {
+  width: 100%;
+
+  .title-row {
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+    position: relative;
+
+    h2 {
+      margin: 0;
     }
+  }
+
+  .card-link {
+    width: 100%;
+    float: left;
+  }
+}
+.form-group {
+  .btn {
+    margin-right: 15px;
+  }
+}
+.media {
+  border-bottom: 1px dotted #ccc;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+}
+svg {
+  margin: 0 5px;
+  color: #563d7c;
+  cursor: pointer;
+}
+.btn svg{
+   color: #fff;
+}
+.vote-icons {
+  span {
+    display: block;
+    margin: 0;
+    width: 100%;
+    line-height: 1.2;
+  }
+}
+.edit-post {
+  padding: 15px;
+  float: left;
+  width: 100%;
+  .btn {
+    margin-right: 15px;
+  }
+}
+.page-not-found {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.categories a {
+  text-transform: capitalize;
+}
+@media all and (max-width: 640px) {
+  .row {
+    margin: 0;
+  }
 }

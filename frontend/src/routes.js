@@ -1,17 +1,21 @@
-import React from 'react';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
-import App from './App';
-import AppHeader from './components/AppHeader'
+import React, { Component } from "react";
+import { Switch, Route } from "react-router-dom";
 
-import AddPost from './components/AddPost'
-export default() => {
+import PostsContainer from "./components/containers/PostsContainer";
+import PostDetails from "./components/containers/PostDetails";
+import CreatePost from "./components/containers/CreatePost";
+import PageNotFound from "./components/ui/PageNotFound";
+
+export default class Routes extends Component {
+  render() {
     return (
-        <Router>
-            <div className="app">
-                <AppHeader/>
-                <Route exact path='/' component={App}/>
-                <Route path='/AddPost' component={AddPost}/>
-            </div>
-        </Router>
-    )
+      <Switch>
+        <Route exact path="/" component={PostsContainer} />
+        <Route exact path="/:category?" component={PostsContainer} />
+        <Route exact path="/post/create" component={CreatePost} />
+        <Route exact path="/:category/:id" component={PostDetails} />
+        <Route component={PageNotFound} />
+      </Switch>
+    );
+  }
 }

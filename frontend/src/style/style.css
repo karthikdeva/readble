@@ -5,7 +5,7 @@ body {
 
 .container {
   padding-top: 50px;
-  max-width: 900px; }
+  max-width: 1024px; }
 
 .bd-navbar {
   min-height: 4rem;
@@ -27,7 +27,7 @@ body {
 
 .navbar-brand svg {
   margin: -3px 15px 0 0;
-  color: #F4B007; }
+  color: #f4b007; }
 
 .btn-primary {
   background-color: #563d7c;
@@ -42,8 +42,14 @@ body {
 .btn svg {
   padding-right: 5px; }
 
+.post-header {
+  margin-bottom: 20px; }
+
 .displayErrors input:invalid {
   border-color: red; }
+
+.home .posts {
+  margin-top: -20px; }
 
 .posts {
   width: 100%; }
@@ -57,15 +63,42 @@ body {
   .posts .card-link {
     width: 100%;
     float: left; }
-  .posts .vote-icons span {
-    display: block;
-    margin: 0;
-    width: 100%;
-    line-height: 1.2; }
-  .posts .vote-icons svg {
-    margin: 0 5px;
-    color: #563d7c;
-    cursor: pointer; }
+
+.form-group .btn {
+  margin-right: 15px; }
+
+.media {
+  border-bottom: 1px dotted #ccc;
+  margin-bottom: 15px;
+  padding-bottom: 15px; }
+
+svg {
+  margin: 0 5px;
+  color: #563d7c;
+  cursor: pointer; }
+
+.btn svg {
+  color: #fff; }
+
+.vote-icons span {
+  display: block;
+  margin: 0;
+  width: 100%;
+  line-height: 1.2; }
+
+.edit-post {
+  padding: 15px;
+  float: left;
+  width: 100%; }
+  .edit-post .btn {
+    margin-right: 15px; }
+
+.page-not-found {
+  text-align: center;
+  padding-top: 50px; }
+
+.categories a {
+  text-transform: capitalize; }
 
 @media all and (max-width: 640px) {
   .row {
