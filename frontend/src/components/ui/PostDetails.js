@@ -35,7 +35,6 @@ export default class PostDetails extends Component {
       location,
       onEditPost
     } = this.props;
-    console.log("PostDetails",this.props);
     return (
       <div className="post-details">
        {this.viewPost() && (
