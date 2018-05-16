@@ -1,21 +1,13 @@
-import { connect } from "react-redux";
+import {connect} from "react-redux";
 import Posts from "../ui/Posts";
-import {
-  fetchPosts,
-  upVotePost,
-  downVotePost,
-  editPost,
-  deletePost
-} from "../../actions";
+import {fetchPosts, upVotePost, downVotePost, editPost, deletePost} from "../../actions";
 
 const getSortedPosts = state => {
-  let filteredPosts =
-    state.reducer.category === "all"
-      ? state.reducer.posts
-      : state.reducer.posts.filter(
-          post => post.category === state.reducer.category
-        );
-  const sortId = parseInt(state.reducer.sort,10);
+  const {category, posts, sort} = state.reducer;
+  let filteredPosts = category === "all"
+    ? posts
+    : posts.filter(post => post.category === category);
+  const sortId = parseInt(sort, 10);
   if (filteredPosts) {
     switch (sortId) {
       case 0:
@@ -33,13 +25,10 @@ const getSortedPosts = state => {
   return filteredPosts;
 };
 
-const mapStateToProps = (state, props) => {
-  return {
-    posts: getSortedPosts(state),
-    editPost: state.reducer.editPost,
-    sort: state.reducer.sort
-  };
-};
+const mapStateToProps = (state, props) => ({
+  posts: getSortedPosts(state),
+  ...state.reducer
+});
 
 const mapDispatchToProps = dispatch => ({
   fetchPosts: () => dispatch(fetchPosts()),

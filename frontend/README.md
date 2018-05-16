@@ -1,6 +1,6 @@
-## Project Name: Readable : [~Readable~](https://github.com/karthikdeva)
+## Project Name: Readable : [**Readable**](https://github.com/karthikdeva)
 
-## Author: [~Karthikdeva~](https://github.com/karthikdeva)
+## Author: [**Karthikdeva**](https://github.com/karthikdeva)
 
 ## Description :
 

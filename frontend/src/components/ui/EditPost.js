@@ -46,7 +46,7 @@ export default class EditPost extends Component {
               placeholder="Body"
               value={this.state.body}
               onChange={this.handleChange("body")}
-                        />
+            />
           </div>
           <div className="form-group">
             <input

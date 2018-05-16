@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import Routes from './Routes';
+import Routes from './routes';
 import AppHeader from './components/ui/AppHeader';
 
 class App extends Component {

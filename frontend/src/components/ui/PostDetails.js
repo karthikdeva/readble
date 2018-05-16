@@ -7,6 +7,7 @@ import Comments from "../containers/Comments";
 import AddComment from "../containers/AddComment";
 import * as FontAwesome from "react-icons/lib/fa";
 import { getPostedTime, camelCaseToSentanceCase } from "../../utils";
+import PageNotFound from "./PageNotFound";
 
 export default class PostDetails extends Component {
   componentWillMount() {
@@ -34,10 +35,10 @@ export default class PostDetails extends Component {
       location,
       onEditPost
     } = this.props;
-    console.log(this.props);
+    console.log("PostDetails",this.props);
     return (
       <div className="post-details">
-        {post && (
+       {this.viewPost() && (
           <div className="container">
             {location.length !== 1 && (
               <Breadcrumbs category={this.props.category} />
@@ -111,6 +112,7 @@ export default class PostDetails extends Component {
             <AddComment />
           </div>
         )}
+        {!this.viewPost() && <PageNotFound />}
       </div>
     );
   }

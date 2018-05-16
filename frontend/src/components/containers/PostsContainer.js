@@ -8,13 +8,12 @@ import {
 } from '../../actions';
 
 const mapStateToProps = (state, props) => ({
-  categories: state.reducer.categories,
   category: props.match.params.category ? props.match.params.category : '',
-  location: props.location && props.location.pathname
+  location: props.location && props.location.pathname,...state.reducer
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchPosts: () => dispatch(fetchPosts()),
+  fetchPosts: () => dispatch(fetchPosts()), 
   getCategories: () => dispatch(getCategories()),
   setCategory: category => dispatch(setCategory(category)),
   cancelEdit: () => dispatch(cancelEdit())
